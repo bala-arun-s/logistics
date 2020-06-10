@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RestService } from '../rest.service';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +7,6 @@ import { RestService } from '../rest.service';
 })
 export class HomePage {
 
-  private studentlist ;
-  constructor(private restapi: RestService) {
-    this.restapi.getStudents().subscribe((res)=>{
-      console.log(res);
-      this.studentlist = res;
-    }
-    )
-  }
+  constructor() {}
 
 }

@@ -1,0 +1,44 @@
+ion-content {
+    --background:none;
+    background:/*linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5))
+      ,*/url("../../assets/backGround.svg");
+     
+      background-repeat: no-repeat;
+      background-size: cover;
+    background-position: center center;
+  }
+  #image {
+    margin-bottom: 10%;
+  }
+  #trans-box {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    max-width: 400px;
+    /*width: abs($number: 0);*/
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    /*background-size: auto;*/
+    color: white;
+    
+    p {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  strong {
+    font-size: 30px;
+    line-height: 26px;
+  }
+  .container {
+    position: relative;
+    width: 100%;
+  }
+  .container .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }

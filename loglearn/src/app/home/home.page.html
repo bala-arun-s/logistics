@@ -1,22 +1,17 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      welcome page
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-button href="/item-status">I Agree</ion-button>
-  <ion-button>disgree</ion-button>
+  <div id="trans-box">
+    <ion-header class="ion-no-border">
+      <img class="image"  src="../../assets/logoName.png">
+    </ion-header>
 
-  <div>
-    <ion-list *ngFor="let st of studentlist">
-      <ion-item>
-      <ion-label>{{st.name}}</ion-label>
-      <ion-label>{{st.department}}</ion-label>
-      <ion-label>{{st.section}}</ion-label>
-    </ion-item>
-    </ion-list>
+    <div class="ion-text-justify">
+    <br><strong>Description</strong>
+    <p>The term ‘Logistics’ refers to the commercial activity of the transportation of goods i.e, transportation of goods from one place to the other. In the application we try to ease the process of Logistics. Here, we collect the details from the sender to know the destination of the receiver of the product and we also update the information as required by the receiver for their ease, to reduce the misconception of the address to require the package from the sender. This app works with the tie-ups provided by the Logistics service providers.</p>
+    </div>
+  </div>
+  
+  <div class="container">
+    <ion-button class="btn" color="light" fill="outline" size="large" href="/item-status"><strong>Welcome</strong></ion-button>
+    <img  src="../../assets/homeBottom.png">
   </div>
 </ion-content>
