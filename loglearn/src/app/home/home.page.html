@@ -9,4 +9,14 @@
 <ion-content [fullscreen]="true">
   <ion-button href="/item-status">I Agree</ion-button>
   <ion-button>disgree</ion-button>
+
+  <div>
+    <ion-list *ngFor="let st of studentlist">
+      <ion-item>
+      <ion-label>{{st.name}}</ion-label>
+      <ion-label>{{st.department}}</ion-label>
+      <ion-label>{{st.section}}</ion-label>
+    </ion-item>
+    </ion-list>
+  </div>
 </ion-content>

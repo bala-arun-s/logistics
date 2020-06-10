@@ -10,3 +10,16 @@
   <ion-button>login</ion-button>
   <ion-button>sign in</ion-button>
 </ion-content>
+
+<ion-content>
+  <form  #form="ngForm" (ngSubmit)="login()">
+
+  <ion-input name="username" [(ngModel)]="username">user name:</ion-input>
+  <ion-input name="password" [(ngModel)]="password">password :</ion-input>
+  <ion-button type="submit">login </ion-button>
+  <ion-button>sign in</ion-button>
+  <div *ngIf="error" class="error" padding >
+    {{error}}
+  </div>
+  </form>
+</ion-content>
