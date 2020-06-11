@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RestService } from '../rest.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -12,12 +13,12 @@ export class LoginPage implements OnInit {
   password:String;
   error;
   pass;
-  constructor(private restapi: RestService) {}
+  constructor(private restapi: RestService,public http:HttpClient) {}
   login(){
-    this.pass=this.username+"/"+this.password;
-    this.restapi.loginby(this.pass).subscribe((res)=>{
-      console.log(res);
-      this.error = res;
+    var input = {"userId":this.username,"passWord":this.password};
+    this.http.post("http://localhost:8200/login",input,
+    {headers:new HttpHeaders({"Content-Type":"application/json"})}).subscribe((response) => {
+      this.error = response;
     }
     )
   }

@@ -226,3 +226,57 @@
     --ion-tab-bar-background: #1f1f1f;
   }
 }
+
+
+// Inserted
+@font-face {
+  font-family: 'Heebo-Black';
+  src: url('../assets/font-family/heebo-font/Heebo-Black.ttf');
+}
+@font-face {
+  font-family: 'Heebo-Bold';
+  src: url('../assets/font-family/heebo-font/Heebo-Bold.ttf');
+}
+@font-face {
+  font-family: 'Heebo-ExtraBold';
+  src: url('../assets/font-family/heebo-font/Heebo-ExtraBold.ttf');
+}
+@font-face {
+  font-family: 'Heebo-Light';
+  src: url('../assets/font-family/heebo-font/Heebo-Light.ttf');
+}
+@font-face {
+  font-family: 'Heebo-Medium';
+  src: url('../assets/font-family/heebo-font/Heebo-Medium.ttf');
+}
+@font-face {
+  font-family: 'Heebo-Regular';
+  src: url('../assets/font-family/heebo-font/Heebo-Regular.ttf');
+}
+@font-face {
+  font-family: 'Heebo-Thin';
+  src: url('../assets/font-family/heebo-font/Heebo-Thin.ttf');
+}
+:root{
+  --theme-color: #4caf50;
+  --theme-black: #000000;
+  --ion-color-gray: #d7d8da;
+  --ion-color-button: #616161;
+}
+:root {
+  --ion-color-new: #616161;
+  --ion-color-new-rgb: 97,97,97;
+  --ion-color-new-contrast: #ffffff;
+  --ion-color-new-contrast-rgb: 255,255,255;
+  --ion-color-new-shade: #555555;
+  --ion-color-new-tint: #717171;
+}
+
+.ion-color-new {
+  --ion-color-base: var(--ion-color-new);
+  --ion-color-base-rgb: var(--ion-color-new-rgb);
+  --ion-color-contrast: var(--ion-color-new-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-new-contrast-rgb);
+  --ion-color-shade: var(--ion-color-new-shade);
+  --ion-color-tint: var(--ion-color-new-tint);
+}

@@ -1,28 +1,27 @@
-var express = require('express');
-var bodyParser = require('body-parser');
+const express = require('express');
+const bodyParser=require('body-parser');
 
-var app = express();
+const app=express()
 
-var server = app.listen(8081 ,function () {
-    var host =server.address().address
-    var post = server.address().port
-    console.log("Example app listening at http://%s:%s",host,post); 
-})
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "http://localhost:8100"); // update to match the domain you will make the request from
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
 
-app.get('/up/:name/:password', function(req,res) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    var name = req.params.name;
-    var pass = req.params.password;
-    var output;
-    console.log( name );
-    console.log( pass );
-    if(name == 'Arun' && pass == '123456'){
-        output = name + " user found";
+app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.json())
+
+app.post('/login',(req,res)=>{
+    var userId = req.body.userId;
+    var passWord = req.body.passWord;
+    var authentication ='User '
+    if(userId === 'Arun' && passWord === '123456'){
+        authentication = authentication + 'Found';
     } else {
-        output = name + " user not found";
+        authentication = authentication + 'Not Found';
     }
-    res.end(JSON.stringify(output));
-});
+    res.send(JSON.stringify(authentication));
+    console.log(userId,passWord,authentication)
+  });  
+app.listen(8200)

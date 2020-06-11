@@ -8,10 +8,10 @@ export class RestService {
 
   constructor(private http: HttpClient) { }
 
-  loginurl:string ;
+  /*loginurl:string ;
   public loginby(pass){
     this.loginurl ="http://localhost:8081/up/"+pass;
     return this.http.get(this.loginurl)
-  }
+  }*/
   
 }
