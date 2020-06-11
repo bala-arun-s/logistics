@@ -3,12 +3,11 @@
     <img class="logo-image" src="../../assets/icon/lohisticsheader1.png">
   </div>
 </ion-header>
-
 <ion-content>
   <div class="center">
     <div heading-column-lr>
       <h1 big-heading>Login</h1>
-      <h2 small-headng>SIGN UP</h2>
+      <h2 small-headng (click)="inActive()">SIGN UP</h2>
     </div>
     <ion-label>
       
@@ -16,20 +15,20 @@
     <form  #form="ngForm" (ngSubmit)="login()">
       <ion-item transparent>
         <img icon-small src="../../assets/icon/person-circle.svg">
-        <ion-input name="username" [(ngModel)]="Email" placeholder="Username" type="text"></ion-input>
+        <ion-input name="username" [(ngModel)]="username" placeholder="Username" type="text"></ion-input>
       </ion-item>
       <ion-item transparent>
         <img icon-small src="../../assets/icon/key.svg" />
-        <ion-input name="password" [(ngModel)]="Password" placeholder="Password" type="Password"></ion-input>
+        <ion-input name="password" [(ngModel)]="password" placeholder="Password" type="Password"></ion-input>
       </ion-item>
-      <ion-label class="forget-password">Forget Password</ion-label>
+      <ion-label class="forget-password" (click)="inActive()">Forget Password?</ion-label>
   
       <div linespace></div>
       <ion-button color="new" class="ion-button-class" shape="round" fill="solid" size="large" expand="block" (click)="LoginOTP()" type="submit">LOGIN</ion-button>
-      <div *ngIf="error" class="error" padding >
+      <!--div *ngIf="error" class="error" padding >
         {{error}}
-      </div>
+      </div-->
     </form>
-  <ion-label class="ion-text-center">Don't have Account? <span class="link-button" (click)="Register()">Sign Up</span></ion-label>
+  <ion-label class="ion-text-center" (click)="inActive()">Don't have Account? <span class="link-button" (click)="Register()">Sign Up</span></ion-label>
 </div>
 </ion-content>

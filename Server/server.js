@@ -15,11 +15,17 @@ app.use(bodyParser.json())
 app.post('/login',(req,res)=>{
     var userId = req.body.userId;
     var passWord = req.body.passWord;
-    var authentication ='User '
+    var authentication;
     if(userId === 'Arun' && passWord === '123456'){
-        authentication = authentication + 'Found';
+        authentication = 'senderReceiver';
+    } else if(userId === 'Bala' && passWord === '654321') {
+        authentication = 'serviceProvider';
+    } else if(userId === 'Viswa' && passWord === '123456') {
+      authentication = 'senderReceiver';
+    } else if(userId === 'Sam' && passWord === '654321') {
+      authentication = 'serviceProvider';
     } else {
-        authentication = authentication + 'Not Found';
+      authentication = 'error';
     }
     res.send(JSON.stringify(authentication));
     console.log(userId,passWord,authentication)
