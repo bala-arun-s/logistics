@@ -20,7 +20,7 @@ export class LoginPage implements OnInit {
     var input = {"userId":this.username,"passWord":this.password};
     this.http.post("http://localhost:8200/login",input,
     {headers:new HttpHeaders({"Content-Type":"application/json"})}).subscribe((response) => {
-      if(response === 'error') {
+      if(response === 'invalid input') {
         this.showAlert('Login failed!','Invalid username or password');
       }else if (response === 'senderReceiver') {
         this.router.navigateByUrl('receiver');

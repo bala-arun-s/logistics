@@ -1,7 +1,9 @@
 const express = require('express');
-const bodyParser=require('body-parser');
-
+const bodyParser = require('body-parser');
 const app=express()
+const http = require('http').Server(app);
+const fs = require('fs');
+
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "http://localhost:8100"); // update to match the domain you will make the request from
@@ -12,7 +14,10 @@ app.use(function(req, res, next) {
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
 
-app.post('/login',(req,res)=>{
+require('./logIn')(app,fs);
+app.listen(8200)
+
+/*app.post('/login',(req,res)=>{
     var userId = req.body.userId;
     var passWord = req.body.passWord;
     var authentication;
@@ -25,9 +30,8 @@ app.post('/login',(req,res)=>{
     } else if(userId === 'Sam' && passWord === '654321') {
       authentication = 'serviceProvider';
     } else {
-      authentication = 'error';
+      authentication = 'invalid inputr';
     }
     res.send(JSON.stringify(authentication));
     console.log(userId,passWord,authentication)
-  });  
-app.listen(8200)
+  });  */
