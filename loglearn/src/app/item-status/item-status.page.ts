@@ -14,5 +14,6 @@ export class ItemStatusPage implements OnInit {
   }
 
   toLogIn(){this.router.navigateByUrl('login');}
+  toSignUp(){this.router.navigateByUrl('signup');}
 
 }

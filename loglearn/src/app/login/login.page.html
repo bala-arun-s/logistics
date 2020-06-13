@@ -6,29 +6,27 @@
 <ion-content>
   <div class="center">
     <div heading-column-lr>
-      <h1 big-heading>Login</h1>
-      <h2 small-headng (click)="inActive()">SIGN UP</h2>
+      <h1 big-heading>Log in</h1>
+      <h2 small-headng (click)="toSignUp()">SIGN UP</h2>
     </div>
     <ion-label>
       
   </ion-label>
-    <form  #form="ngForm" (ngSubmit)="login()">
       <ion-item transparent>
         <img icon-small src="../../assets/icon/person-circle.svg">
-        <ion-input name="username" [(ngModel)]="username" placeholder="Username" type="text"></ion-input>
+        <ion-input name="username" [(ngModel)]="user.userId" placeholder="Username" type="text"></ion-input>
       </ion-item>
       <ion-item transparent>
         <img icon-small src="../../assets/icon/key.svg" />
-        <ion-input name="password" [(ngModel)]="password" placeholder="Password" type="Password"></ion-input>
+        <ion-input name="password" [(ngModel)]="user.passWord" placeholder="Password" type="Password"></ion-input>
       </ion-item>
       <ion-label class="forget-password" (click)="inActive()">Forget Password?</ion-label>
   
       <div linespace></div>
-      <ion-button color="new" class="ion-button-class" shape="round" fill="solid" size="large" expand="block" (click)="LoginOTP()" type="submit">LOGIN</ion-button>
+      <ion-button color="new" class="ion-button-class" shape="round" fill="solid" size="large" expand="block" (click)="login()">LOG IN</ion-button>
       <!--div *ngIf="error" class="error" padding >
         {{error}}
       </div-->
-    </form>
-  <ion-label class="ion-text-center" (click)="inActive()">Don't have Account? <span class="link-button" (click)="Register()">Sign Up</span></ion-label>
+  <ion-label class="ion-text-center" >Don't have Account? <span class="link-button" (click)="toSignUp()"><u>Sign Up</u></span></ion-label>
 </div>
 </ion-content>

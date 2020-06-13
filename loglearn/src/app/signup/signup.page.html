@@ -1,0 +1,47 @@
+<ion-header class="ion-no-border"><!--[fullscreen]="true"-->
+  <div class="login-header ion-padding">
+    <img class="logo-image" src="../../assets/icon/lohisticsheader1.png">
+  </div>
+</ion-header>
+<ion-content>
+  <div class="center">
+    <div heading-column-lr>
+      <h1 big-heading>Sign up</h1>
+      <h2 small-headng (click)="toLogIn()">LOG IN</h2>
+    </div>
+    <ion-label>
+      
+  </ion-label>
+      <ion-item transparent>
+        <img icon-small src="../../assets/icon/person-circle.svg">
+        <ion-input name="username" [(ngModel)]="user.userId" placeholder="Username" type="text"></ion-input>
+      </ion-item>
+      <ion-item transparent>
+        <img icon-small src="../../assets/icon/call.svg">
+        <ion-input name="username" [(ngModel)]="user.mobileNo" placeholder="Mobile no" type="text"></ion-input>
+      </ion-item>
+      <ion-item transparent>
+        <img icon-small src="../../assets/icon/mail.svg">
+        <ion-input name="username" [(ngModel)]="user.eMail" placeholder="Email id" type="text"></ion-input>
+      </ion-item>
+      <ion-item transparent>
+        <img icon-small src="../../assets/icon/key.svg" />
+        <ion-input name="password" [(ngModel)]="user.passWord" placeholder="Password" type="Password"></ion-input>
+      </ion-item>
+      <ion-item lines="none" middle>
+        <ion-label>User Type</ion-label>
+        <ion-select placeholder="Select One" [(ngModel)]="user.userType">
+          <ion-select-option value="senderReceiver">Sender Receiver</ion-select-option>
+          <ion-select-option value="serviceProvider">Service Provider</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <!--ion-label class="forget-password" (click)="inActive()">Forget Password?</ion-label-->
+  
+      <div linespace></div>
+      <ion-button color="new" class="ion-button-class" shape="round" fill="solid" size="large" expand="block" (click)='signUpSubmit()'>SIGN UP</ion-button>
+      <!--div *ngIf="error" class="error" padding >
+        {{error}}
+      </div-->
+  <ion-label class="ion-text-center" >Have Account? <span class="link-button" (click)="toLogIn()"><u>Log in</u></span></ion-label>
+</div>
+</ion-content>

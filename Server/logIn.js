@@ -18,7 +18,7 @@ module.exports = function(app,fs){
                     }         
                 }
                 console.log("invalid input");
-                res.send(JSON.stringify('invalid input'));
+                res.send(JSON.stringify('invalidInput'));
             }
         })
     })
