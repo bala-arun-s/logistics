@@ -21,9 +21,9 @@ export class SignupPage implements OnInit {
       if(response === 'userIdAlreadyExists') {
         this.showAlert('Change the user id!','User id already exists');
       }else if (response === 'senderReceiver') {
-        this.router.navigateByUrl('receiver');
+        this.router.navigateByUrl('sender-receiver');
       }else if (response === 'serviceProvider') {
-        this.router.navigateByUrl('item-list');
+        this.router.navigateByUrl('service-provider');
       }
     }
     )

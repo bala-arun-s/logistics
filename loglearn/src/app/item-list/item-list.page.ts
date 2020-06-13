@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationExtras } from '@angular/router';
+//import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-item-list',
@@ -8,19 +8,19 @@ import { Router, NavigationExtras } from '@angular/router';
 })
 export class ItemListPage implements OnInit {
 
-  constructor(private router : Router) { }
+  constructor(/*private router : Router*/) { }
 
   ngOnInit() {
   }
 
-  toAbout(){
-    let back: NavigationExtras = {
-      queryParams: {
-        special:"emp"
-      }
-    };
-    this.router.navigate(['about'],back);
-  }
-  toHistory(){this.router.navigateByUrl('history');}
+  // toAbout(){
+  //   let back: NavigationExtras = {
+  //     queryParams: {
+  //       special:"emp"
+  //     }
+  //   };
+  //   this.router.navigate(['about'],back);
+  // }
+  // toHistory(){this.router.navigateByUrl('history');}
 
 }

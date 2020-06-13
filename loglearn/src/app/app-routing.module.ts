@@ -43,6 +43,14 @@ const routes: Routes = [
     path: 'signup',
     loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
   },
+  {
+    path: 'sender-receiver',
+    loadChildren: () => import('./sender-receiver/sender-receiver.module').then( m => m.SenderReceiverPageModule)
+  },
+  {
+    path: 'service-provider',
+    loadChildren: () => import('./service-provider/service-provider.module').then( m => m.ServiceProviderPageModule)
+  },
 ];
 
 @NgModule({

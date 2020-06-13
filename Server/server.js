@@ -16,9 +16,4 @@ app.use(bodyParser.json())
 require('./logIn')(app,fs);
 require('./signup')(app,fs);
 
-var server = app.listen(8200,function () {
-  var host = server.address().address
-  var post = server.address().port
-  console.log("Example app listening at http://%s:%s",host,post); 
-  console.log("http://localhost:%s",post)
-})
+var server = app.listen(8200)

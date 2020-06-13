@@ -1,0 +1,24 @@
+<super-tabs>
+  <super-tabs-toolbar slot="top">
+    <super-tab-button>
+      <ion-label>ABOUT</ion-label>    
+    </super-tab-button>
+    <super-tab-button>
+      <ion-label>RECEIVER</ion-label>    
+    </super-tab-button>
+    <super-tab-button>
+      <ion-label>SENDER</ion-label>    
+    </super-tab-button>
+  </super-tabs-toolbar>
+  <super-tabs-container>
+    <super-tab>
+      <ion-nav [root]="myPage1" ></ion-nav>
+    </super-tab>
+    <super-tab>
+      <ion-nav [root]="myPage2" ></ion-nav>
+    </super-tab>
+    <super-tab>
+      <ion-nav [root]="myPage3" ></ion-nav>
+    </super-tab>
+  </super-tabs-container>
+</super-tabs>

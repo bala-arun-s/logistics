@@ -11,10 +11,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RestService } from './rest.service';
 
+import { SuperTabsModule } from '@ionic-super-tabs/angular';
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule,SuperTabsModule.forRoot()],
   providers: [
     StatusBar,
     SplashScreen,

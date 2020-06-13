@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationExtras } from '@angular/router';
+//import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-receiver',
@@ -8,19 +8,19 @@ import { Router, NavigationExtras } from '@angular/router';
 })
 export class ReceiverPage implements OnInit {
 
-  constructor(private router : Router) { }
+  constructor(/*private router : Router*/) { }
 
   ngOnInit() {
   }
 
-  toAbout(){
-    let back: NavigationExtras = {
-      queryParams: {
-        special:"user"
-      }
-    };
-    this.router.navigate(['about'],back);
-  }
-  toSender(){this.router.navigateByUrl('sender');}
+  // toAbout(){
+  //   let back: NavigationExtras = {
+  //     queryParams: {
+  //       special:"user"
+  //     }
+  //   };
+  //   this.router.navigate(['about'],back);
+  // }
+  // toSender(){this.router.navigateByUrl('sender');}
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationExtras } from '@angular/router';
+//import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-history',
@@ -8,20 +8,20 @@ import { Router, NavigationExtras } from '@angular/router';
 })
 export class HistoryPage implements OnInit {
 
-  constructor(private router : Router) { }
+  constructor(/*private router : Router*/) { }
 
   ngOnInit() {
   }
 
-  toAbout(){
-    let back: NavigationExtras = {
-      queryParams: {
-        special:"emp"
-      }
-    };
-    this.router.navigate(['about'],back);
-  }
+  // toAbout(){
+  //   let back: NavigationExtras = {
+  //     queryParams: {
+  //       special:"emp"
+  //     }
+  //   };
+  //   this.router.navigate(['about'],back);
+  // }
 
-  toItemList(){this.router.navigateByUrl('item-list');}
+  // toItemList(){this.router.navigateByUrl('item-list');}
 
 }

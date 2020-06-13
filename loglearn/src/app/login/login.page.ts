@@ -22,9 +22,9 @@ export class LoginPage implements OnInit {
       if(response === 'invalidInput') {
         this.showAlert('Log in failed!','Invalid username or password');
       }else if (response === 'senderReceiver') {
-        this.router.navigateByUrl('receiver');
+        this.router.navigateByUrl('sender-receiver');
       }else if (response === 'serviceProvider') {
-        this.router.navigateByUrl('item-list');
+        this.router.navigateByUrl('service-provider');
       }
     }
     )
