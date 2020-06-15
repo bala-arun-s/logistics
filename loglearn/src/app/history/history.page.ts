@@ -13,15 +13,4 @@ export class HistoryPage implements OnInit {
   ngOnInit() {
   }
 
-  // toAbout(){
-  //   let back: NavigationExtras = {
-  //     queryParams: {
-  //       special:"emp"
-  //     }
-  //   };
-  //   this.router.navigate(['about'],back);
-  // }
-
-  // toItemList(){this.router.navigateByUrl('item-list');}
-
 }

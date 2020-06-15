@@ -1,7 +1,6 @@
 ion-content {
     --background:none;
-    background:/*linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5))
-      ,*/url("../../assets/backGround.svg");
+    background:url("../../assets/backGround.svg");
      
       background-repeat: no-repeat;
       background-size: cover;
@@ -16,10 +15,8 @@ ion-content {
     margin-right: auto;
     margin-bottom: 60px;
     max-width: 400px;
-    /*width: abs($number: 0);*/
     padding: 40px;
     background: rgba(0, 0, 0, 0.7);
-    /*background-size: auto;*/
     color: white;
     
     p {

@@ -13,14 +13,4 @@ export class ReceiverPage implements OnInit {
   ngOnInit() {
   }
 
-  // toAbout(){
-  //   let back: NavigationExtras = {
-  //     queryParams: {
-  //       special:"user"
-  //     }
-  //   };
-  //   this.router.navigate(['about'],back);
-  // }
-  // toSender(){this.router.navigateByUrl('sender');}
-
 }

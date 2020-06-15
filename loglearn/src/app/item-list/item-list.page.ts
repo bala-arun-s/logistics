@@ -13,14 +13,4 @@ export class ItemListPage implements OnInit {
   ngOnInit() {
   }
 
-  // toAbout(){
-  //   let back: NavigationExtras = {
-  //     queryParams: {
-  //       special:"emp"
-  //     }
-  //   };
-  //   this.router.navigate(['about'],back);
-  // }
-  // toHistory(){this.router.navigateByUrl('history');}
-
 }
