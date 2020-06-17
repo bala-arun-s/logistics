@@ -1,7 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const {MongoClient, ObjectId} = require('mongodb');
 const app=express()
-const fs = require('fs');
+const mongoDbUrl = "mongodb://localhost:27017/";
+//const fs = require('fs');
 
 
 app.use(function(req, res, next) {
@@ -13,7 +15,7 @@ app.use(function(req, res, next) {
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
 
-require('./logIn')(app,fs);
-require('./signup')(app,fs);
+require('./logIn')(app,mongoDbUrl, MongoClient, ObjectId);
+//require('./signup')(app,fs);
 
 var server = app.listen(8200)

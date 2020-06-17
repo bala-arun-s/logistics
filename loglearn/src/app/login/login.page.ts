@@ -19,12 +19,12 @@ export class LoginPage implements OnInit {
     this.http.post("http://localhost:8200/login",this.user,
     {headers:new HttpHeaders({"Content-Type":"application/json"})}).subscribe((response) => {
       console.log(response);
-      if(response === 'invalidInput') {
-        this.showAlert('Log in failed!','Invalid username or password');
-      }else if (response === 'senderReceiver') {
-        this.router.navigateByUrl('sender-receiver');
-      }else if (response === 'serviceProvider') {
+      if (response['userType'] === 'serviceProvider') {
         this.router.navigateByUrl('service-provider');
+      }else if (response['userType'] === 'senderReceiver') {
+        this.router.navigateByUrl('sender-receiver');
+      }else {
+        this.showAlert('Log in failed!','Invalid username or password');
       }
     }
     )
