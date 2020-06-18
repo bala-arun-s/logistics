@@ -1,9 +1,17 @@
-<ion-header class="ion-no-border">
+<!-- <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-searchbar class="bottom" color="danger"></ion-searchbar>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
+  <div class="wrapper">
+    <div *ngFor="let item of history">
+      <div class="box received">
+        <h4>Item {{item.itemNo}}</h4>
+        <p class="right" >{{item.status}}</p>
+      </div>
+    </div>
+  </div>
   
 </ion-content>
