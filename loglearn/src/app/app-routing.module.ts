@@ -50,7 +50,11 @@ const routes: Routes = [
   {
     path: 'service-provider',
     loadChildren: () => import('./service-provider/service-provider.module').then( m => m.ServiceProviderPageModule)
+  },  {
+    path: 'new-item',
+    loadChildren: () => import('./new-item/new-item.module').then( m => m.NewItemPageModule)
   },
+
 ];
 
 @NgModule({

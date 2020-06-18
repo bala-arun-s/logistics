@@ -18,4 +18,9 @@ app.use(bodyParser.json())
 require('./logIn')(app,mongoDbUrl, MongoClient, ObjectId);
 //require('./signup')(app,fs);
 
+require('./getData')(app,mongoDbUrl, MongoClient, ObjectId);
+
+require('./newItem')(app,mongoDbUrl, MongoClient, ObjectId);
+
+
 var server = app.listen(8200)

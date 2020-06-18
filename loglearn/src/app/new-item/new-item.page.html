@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Goods to Send</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+<ion-item>
+  <ion-label position="floating">Sender Address</ion-label>
+  <ion-input [(ngModel)]="newItem.senderAddress" type="text"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Reciver Address</ion-label>
+  <ion-input [(ngModel)]="newItem.reciverAddress" type="text"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Reciver Gmail</ion-label>
+  <ion-input [(ngModel)]="newItem.reciverGmail" type="text"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Reciver Mobile no</ion-label>
+  <ion-input [(ngModel)]="newItem.reciverMobileno" type="number"></ion-input>
+</ion-item>
+
+<ion-list>
+
+  <ion-item>
+    <ion-label>Service Providers</ion-label>
+    <ion-select [(ngModel)]="newItem.serviceProviders" type="text" okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="fast">fast</ion-select-option>
+      <ion-select-option value="istant">istant</ion-select-option>
+      <ion-select-option value="deliver">deliver</ion-select-option>
+      <ion-select-option value="tamora">tamora</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+</ion-list>
+
+ 
+
+</ion-content>
+
+<ion-fotter>
+  <ion-row>
+    <ion-col size="6"   class="ion-text-center">
+      <ion-button color="dark" class="ion-button-class" fill="clear" expand="block" (click)="doCancel()">CANCEL</ion-button>
+    </ion-col>
+    <ion-col size="6" class="ion-text-center">
+      <ion-button color="dark" class="ion-button-class" fill="clear" expand="block" (click)="doSubmit()">CONFIRM</ion-button>
+    </ion-col>
+  </ion-row>  
+</ion-fotter>

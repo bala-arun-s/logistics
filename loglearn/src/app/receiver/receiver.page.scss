@@ -8,19 +8,21 @@
     display: grid;
     grid-gap: 5px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-auto-rows: 50px;
+    grid-auto-rows:  minmax(50px, auto);
   }
   
   .box {
-    border-radius: 5px;
-    padding: 1em;
+    //border-radius: 5px;
+    //padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;;
     margin-left: 5px;
     margin-right: 5px;
     flex: 1 1 300px;
   
     display: flex;
     align-items: center;
-    height: 50px;
+    min-height: 50px;
     h4 { color: rgb(255, 255, 255); }
   }
   .right {

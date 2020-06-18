@@ -6,10 +6,19 @@
 <ion-content padding>
 
   <div class="wrapper">
+    <div *ngFor="let item of resiveData" >
+      <div class="box received">
+        <h4>Item {{item.itemNo}}</h4>
+        <p class="right" >{{item.status}}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="wrapper">
      <div class="box confirm">
         <h4>Item 10</h4>
         <ion-button fill="outline" color="light" class="right" >Confirm</ion-button>
-        <!--p>message</p-->
+        <!--p>message</p>
      </div>
 
      <div class="box inprogeress">
@@ -32,6 +41,6 @@
        <p class="right" >Received</p>
      </div>
   
-  </div>
+  </div> -->
 
 </ion-content>

@@ -5,9 +5,26 @@
 </ion-header>
 
 <ion-content>
+
+
+    <div class="wrapper">
+      <div *ngFor="let item of senderData" >
+        <div class="box received">
+          <h4>Item {{item.itemNo}}</h4>
+          <p class="right" >{{item.status}}</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button>
+    <ion-fab-button (click)="goNewItem()">
       <ion-icon name="share"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 </ion-content>
+
+
+<!-- [routerLink]="['/new-item']" -->

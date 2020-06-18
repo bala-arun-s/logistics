@@ -9,7 +9,7 @@ module.exports = function(app,mongoDbUrl, MongoClient, ObjectId){
             console.log("mongoDb connected successfully to server for login");
             var dbName = db.db('LOGISTICS');
 
-            dbName.collection("userAuthData").find(userLoginInput,{ projection: { _id: 1, gMail: 1, mobileNo: 1,userType: 1}}).toArray(function(err, result) {
+            dbName.collection("userAuthData").find(userLoginInput,{ projection: { _id: 1, userName: 1, gMail: 1, mobileNo: 1,userType: 1}}).toArray(function(err, result) {
                 if (err) throw err;
                 console.log(result[0]);
                 res.send(result[0]);

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { RestService } from '../rest.service';
 
 @Component({
   selector: 'app-about',
@@ -7,6 +8,9 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./about.page.scss'],
 })
 export class AboutPage implements OnInit {
+
+  userData;
+
 
   // who;
   // button1;
@@ -31,7 +35,9 @@ export class AboutPage implements OnInit {
   //   if(this.who=='user'){this.router.navigateByUrl('sender');}
   //   else if(this.who=='emp'){this.router.navigateByUrl('history');}
   // }
-  constructor(private router :Router) {}
+  constructor(private router :Router, private restapi: RestService) {
+    this.userData=this.restapi.getUserData();
+  }
   toLogOut(){this.router.navigateByUrl('item-status');}
 
   ngOnInit() {
