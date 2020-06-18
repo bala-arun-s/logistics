@@ -5,5 +5,12 @@
 </ion-header>
 
 <ion-content>
-  
+  <div class="wrapper">
+    <div *ngFor="let item of itemList" >
+      <div class="box received">
+        <h4>Item {{item.itemNo}}</h4>
+        <ion-button class="right" fill="outline" color="light" (click)="ondeli(item._id)">Delivered</ion-button>
+      </div>
+    </div>
+  </div>
 </ion-content>

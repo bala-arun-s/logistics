@@ -9,18 +9,19 @@ module.exports = function(app,mongoDbUrl, MongoClient, ObjectId){
 
             console.log("mongoDb connected successfully to server for new item");
             var dbName = db.db('LOGISTICS');
+            var tap;
+            var newInput;
 
             dbName.collection("userAuthData").find({"gMail":newItem[1].reciverGmail}).toArray(function(err, result) {
                 if (err) throw err;
-                var tap=result.userName;
-                console.log(result,/*JSON.parse(JSON.stringify(result)),*/tap);
-    //var temp = JSON.stringify(ObjectId(result._id))JSON.stringify(result)._id;
+                tap=result[0]._id;
+                console.log(result,tap);
+                newInput = {"itemNo":itemNo,"sender":ObjectId(newItem[0]),"reciver":tap,"senderAddress":newItem[1].senderAddress,"reciverAddress":newItem[1].reciverAddress,"serviceProvider":newItem[1].serviceProviders,"status":"not Delivered"}
+                console.log(newInput);
+                dbName.collection('itemList').insertOne(newInput).then((result) => { console.log(result) });
+                itemNo=itemNo+1;
 
             });
-            //var newInput={"itemNo":itemNo,"sender":ObjectId(newItem[0]),"reciver":ObjectId(result._id),"senderAddress":newItem[1].senderAddress,"reciverAddress":newItem[1].reciverAddress,"serviceProvider":newItem[1].serviceProviders}
-           // console.log(newInput);
-        //     //db.collection('itemList').insertOne(newItem).then((result) => { console.log(result.insertedId) });
-    
 
         });
         res.send(JSON.stringify('newItem Done'));
