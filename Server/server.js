@@ -22,6 +22,7 @@ require('./getData')(app,mongoDbUrl, MongoClient, ObjectId);
 
 require('./newItem')(app,mongoDbUrl, MongoClient, ObjectId);
 require('./delivered')(app,mongoDbUrl, MongoClient, ObjectId);
+require('./signup')(app,mongoDbUrl, MongoClient, ObjectId);
 
 
 var server = app.listen(8200)

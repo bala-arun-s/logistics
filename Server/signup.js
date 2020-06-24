@@ -1,5 +1,30 @@
-module.exports = function(app,fs){
+module.exports = function(app,mongoDbUrl, MongoClient, ObjectId){
     app.post('/signup',(req,res) => {
+        var userSignUpInput = req.body;
+        console.log(userSignUpInput);
+        MongoClient.connect(mongoDbUrl, { useUnifiedTopology: true }, (err, db) => {
+            if (err) { console.log('mongoDb server not conected',err) }
+        
+            console.log("mongoDb connected successfully to server for login");
+            var dbName = db.db('LOGISTICS');
+            
+            dbName.collection("userAuthData").insertOne(userSignUpInput, function(err, res) {
+                if (err) throw err;
+                console.log("1 document inserted");
+                db.close();
+              })
+
+            
+
+            /*dbName.collection("userAuthData").find(userLoginInput,{ projection: { _id: 1, userName: 1, gMail: 1, mobileNo: 1,userType: 1}}).toArray(function(err, result) {
+                if (err) throw err;
+                console.log(result[0]);
+                res.send(result[0]);
+                db.close(); */
+            });
+});
+
+   /* app.post('/signup',(req,res) => {
         var newUser = req.body;
         fs.readFile('user.json', function (err, data) {
                 var userObj = JSON.parse(data)
@@ -16,5 +41,5 @@ module.exports = function(app,fs){
                 res.send(JSON.stringify(userObj[userObj.length-1].userType));
             })
         console.log(newUser);
-    })
+    })*/
 }
