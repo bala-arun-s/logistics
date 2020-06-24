@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "5ee9b62a37f0fc3788314568"
+  },
+  "userName": "bala",
+  "passWord": "arun",
+  "gMail": "bala@gmail.com",
+  "mobileNo": "7894561234",
+  "userType": "Sender Receiver"
+},{
+  "_id": {
+    "$oid": "5eea0f8837f0fc378831456a"
+  },
+  "userName": "arun",
+  "passWord": "kumar",
+  "gMail": "arun@gmail.com",
+  "mobileNo": "9999999",
+  "userType": "Sender Receiver"
+},{
+  "_id": {
+    "$oid": "5eeb22ccfcbd851978016aa7"
+  },
+  "userName": "sam",
+  "passWord": "123",
+  "gMail": "sam@gmail.com",
+  "mobileNo": "1001001",
+  "userType": "Service Provider"
+}]
