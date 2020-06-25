@@ -7,13 +7,14 @@ module.exports = function(app,mongoDbUrl, MongoClient, ObjectId){
 
         MongoClient.connect(mongoDbUrl, { useUnifiedTopology: true }, (err, db) => {
             if (err) { console.log('mongoDb server not conected',err) }
-            console.log("mongoDb connected successfully to server for update");
+            console.log("mongoDb connected successfully to server for deliverd update");
             var dbName = db.db('LOGISTICS');
 
             
-            dbName.collection("itemList").updateOne({_id:ObjectId(itemId)}, {$set:{status:"Delivered"}}, function(err, res) {
+            dbName.collection("itemList").updateOne({_id:ObjectId(itemId)}, {$set:{status:"Delivered"}}, function(err, resut) {
                 if (err) throw err;
                 console.log("1 document updated");
+                res.send(JSON.stringify("UPDATE FOR DELIVER IS DONE"));
                 db.close();
               });
         });

@@ -8,10 +8,16 @@ export class RestService {
   public userData;
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    //this.userData=JSON.parse(localStorage.getItem('localData'));
+    //console.log("userLocal",this.userData);
+    
+    //console.log(JSON.parse(localStorage));
+  }
 
   public storeData(data){
     this.userData = data;
+    //localStorage.setItem("localData",JSON.stringify(this.userData));
   }
   public getUserData(){
     return this.userData;

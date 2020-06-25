@@ -14,7 +14,7 @@
   </ion-label>
       <ion-item transparent>
         <img icon-small src="../../assets/icon/person-circle.svg">
-        <ion-input name="username" [(ngModel)]="user.userId" placeholder="Username" type="text"></ion-input>
+        <ion-input name="username" [(ngModel)]="user.userName" placeholder="Username" type="text"></ion-input>
       </ion-item>
       <ion-item transparent>
         <img icon-small src="../../assets/icon/call.svg">
@@ -22,7 +22,7 @@
       </ion-item>
       <ion-item transparent>
         <img icon-small src="../../assets/icon/mail.svg">
-        <ion-input name="username" [(ngModel)]="user.eMail" placeholder="Email id" type="text"></ion-input>
+        <ion-input name="username" [(ngModel)]="user.gMail" placeholder="Gmail id" type="text"></ion-input>
       </ion-item>
       <ion-item transparent>
         <img icon-small src="../../assets/icon/key.svg" />
@@ -31,8 +31,8 @@
       <ion-item lines="none" middle>
         <ion-label>User Type</ion-label>
         <ion-select placeholder="Select One" [(ngModel)]="user.userType">
-          <ion-select-option value="senderReceiver">Sender Receiver</ion-select-option>
-          <ion-select-option value="serviceProvider">Service Provider</ion-select-option>
+          <ion-select-option value="Sender Receiver">Sender Receiver</ion-select-option>
+          <ion-select-option value="Service Provider">Service Provider</ion-select-option>
         </ion-select>
       </ion-item>
       <!--ion-label class="forget-password" (click)="inActive()">Forget Password?</ion-label-->

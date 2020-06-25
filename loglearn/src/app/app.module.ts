@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RestService } from './rest.service';
-
+import { HistoryPage } from './history/history.page'
 import { SuperTabsModule } from '@ionic-super-tabs/angular';
 
 
@@ -22,7 +22,8 @@ import { SuperTabsModule } from '@ionic-super-tabs/angular';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    RestService
+    RestService,
+    HistoryPage
   ],
   bootstrap: [AppComponent]
 })

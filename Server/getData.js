@@ -50,7 +50,7 @@ module.exports = function(app,mongoDbUrl, MongoClient, ObjectId){
         MongoClient.connect(mongoDbUrl, { useUnifiedTopology: true }, (err, db) => {
             if (err) { console.log('mongoDb server not conected',err) }
         
-            console.log("mongoDb connected successfully to server for get sender");
+            console.log("mongoDb connected successfully to server for get item list");
             var dbName = db.db('LOGISTICS');
 
             dbName.collection("itemList").find({"status":"not Delivered"}).toArray(function(err, result) {

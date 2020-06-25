@@ -5,12 +5,13 @@ module.exports = function(app,mongoDbUrl, MongoClient, ObjectId){
         MongoClient.connect(mongoDbUrl, { useUnifiedTopology: true }, (err, db) => {
             if (err) { console.log('mongoDb server not conected',err) }
         
-            console.log("mongoDb connected successfully to server for login");
+            console.log("mongoDb connected successfully to server for signup");
             var dbName = db.db('LOGISTICS');
             
-            dbName.collection("userAuthData").insertOne(userSignUpInput, function(err, res) {
+            dbName.collection("userAuthData").insertOne(userSignUpInput, function(err, result) {
                 if (err) throw err;
-                console.log("1 document inserted");
+                console.log("1 document inserted",result.ops[0]);
+                res.send(result.ops[0]);
                 db.close();
               })
 

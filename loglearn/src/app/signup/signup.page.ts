@@ -15,14 +15,17 @@ export class SignupPage implements OnInit {
   constructor(private restapi: RestService,public http:HttpClient,public alertController: AlertController,private router : Router) { }
 
   signUpSubmit(){
+    console.log("Sending data to server....");
     this.http.post("http://localhost:8200/signup",this.user,
     {headers:new HttpHeaders({"Content-Type":"application/json"})}).subscribe((response) => {
       console.log(response);
-      if(response === 'userIdAlreadyExists') {
-        this.showAlert('Change the user id!','User id already exists');
-      }else if (response === 'senderReceiver') {
+      if (response === null){
+        this.showAlert('Log in failed!','Invalid username or password');
+      }else if (response['userType'] === 'Sender Receiver') {
+        this.restapi.storeData(response);
         this.router.navigateByUrl('sender-receiver');
-      }else if (response === 'serviceProvider') {
+      }else if (response['userType'] === 'Service Provider') {
+        this.restapi.storeData(response);
         this.router.navigateByUrl('service-provider');
       }
     }
