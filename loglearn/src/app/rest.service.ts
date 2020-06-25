@@ -9,15 +9,18 @@ export class RestService {
 
 
   constructor(private http: HttpClient) { 
-    //this.userData=JSON.parse(localStorage.getItem('localData'));
-    //console.log("userLocal",this.userData);
+    console.log("cons reaload localSrorage",localStorage.getItem('localData'));
+    this.userData=JSON.parse(localStorage.getItem('localData'));
+    console.log("cons assign local to userData",this.userData);
     
     //console.log(JSON.parse(localStorage));
   }
 
   public storeData(data){
+    localStorage.clear();
     this.userData = data;
-    //localStorage.setItem("localData",JSON.stringify(this.userData));
+    localStorage.setItem("localData",JSON.stringify(data));
+    console.log("insialisation localSrorage",localStorage.getItem('localData'));
   }
   public getUserData(){
     return this.userData;

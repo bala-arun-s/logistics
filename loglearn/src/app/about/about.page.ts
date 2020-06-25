@@ -38,7 +38,12 @@ export class AboutPage implements OnInit {
   constructor(private router :Router, private restapi: RestService) {
     this.userData=this.restapi.getUserData();
   }
-  toLogOut(){this.router.navigateByUrl('login');}
+  toLogOut(){
+    localStorage.clear();
+    console.clear()
+    console.log("logout localSrorage",localStorage.getItem('localData'));
+    this.router.navigateByUrl('login');
+  }
 
   ngOnInit() {
   }
