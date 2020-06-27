@@ -2,8 +2,9 @@ module.exports = function(app,mongoDbUrl, MongoClient, ObjectId){
 
     app.get('/reciver/:id', function(req,res) {
         var id = req.params.id;
+        console.log("id receiver",id);
         var search = {"reciver":ObjectId(id)};
-        console.log(search);
+        console.log("recive::",search);
 
         MongoClient.connect(mongoDbUrl, { useUnifiedTopology: true }, (err, db) => {
             if (err) { console.log('mongoDb server not conected',err) }

@@ -1,5 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+// import { Observable } from 'rxjs';
+// import { Observable } from  'rxjs/Observable';
+// import { map } from 'rxjs/add/operator/map';
+import { map, take } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { Action } from 'rxjs/internal/scheduler/Action';
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +35,28 @@ export class RestService {
     const reciverurl="http://localhost:8200/reciver/"+this.userData['_id'];
     return this.http.get(reciverurl);
   }
+  // public reciver()   {
+  //   console.log("rezzz",this.userData['_id']);
+  //   const reciverurl="http://localhost:8200/reciver/"+this.userData['_id'];
+  //   this.http.get(reciverurl).pipe(
+      
+  //     map(items  => {
+  //       console.log("map");
+  //       return items;
+  //     }));
+  // }
+    // this.http.get(reciverurl).pipe(map(action  => {
+
+    //     action.map((a => {}));
+      
+    //   })
+      
+    //   .catch((err)=>{
+      
+    //   console.error(err);
+      
+    //   }));
+  //}
   public sender() {
     const senderurl="http://localhost:8200/sender/"+this.userData['_id'];
     return this.http.get(senderurl);
