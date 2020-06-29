@@ -21,3 +21,68 @@ Mongo Db(v4.2.7) is a no-SQL database, which is used in order to store the infor
 <p align="center">
 <img src="https://github.com/bala-arun-s/newlogistics/blob/master/raw/Screen%20Navigation%20Flow%20.png">
 </p>
+
+## Pages in this Application
+
+<img src="https://github.com/bala-arun-s/newlogistics/blob/master/raw/Description%20page.png" width="40%" align="right">
+
+### Description page
+Initially the application loads with the ‘Description’ page where it describes the application in brief, where it welcomes the users and it has a welcome button at bottom which navigates to ‘log-in’ page.
+<table> <tr></tr> </table>
+
+<img src="" width="40%" align="right">
+
+### Log-In page
+<table> <tr></tr> </table>
+
+<img src="" width="40%" align="right">
+
+### Sign-Up page
+<table> <tr></tr> </table>
+
+<img src="" width="40%" align="right">
+
+### Tab pages
+<table> <tr></tr> </table>
+
+<img src="" width="40%" align="right">
+
+### About page
+<table> <tr></tr> </table>
+
+<img src="" width="40%" align="right">
+
+### Receiver page
+<table> <tr></tr> </table>
+
+<img src="" width="40%" align="right">
+
+### Sender page
+<table> <tr></tr> </table>
+
+<img src="" width="40%" align="right">
+
+### Goods-to-send page
+<table> <tr></tr> </table>
+
+<img src="" width="40%" align="right">
+
+### Item-list page
+<table> <tr></tr> </table>
+
+<img src="" width="40%" align="right">
+
+### History Page
+<table> <tr></tr> </table>
+
+
+
+
+
+
+<table>
+  <tr>
+    <td></td>
+     <td></td>
+  </tr>
+  </table>
