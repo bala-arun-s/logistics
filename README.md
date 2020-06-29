@@ -46,7 +46,8 @@ The ‘User Type’ is divided into ‘Service-Provider’, ‘Sender-Receiver�
 If the user is a normal client, like people using this app then the user must choose ‘Sender-Receiver’.
 If the user is working in a Logistic service providing company which is already tie-upped to this app, then the user must choose ‘Service-Provider’. 
 Sign up button which works the same as the Login button which navigates the user to the next page.
-The page which wants to display after the login page is decided by the user type which was registered in this page at user type select option. If the user type is Sender-Receiver then it navigates to ‘Sender-Receiver’ page, else if the user type is Service-Provider then it navigates to the ‘Service-Provider’ page
+The page which wants to display after the login page is decided by the user type which was registered in this page at user type select option. If the user type is Sender-Receiver then it navigates to ‘Sender-Receiver’ page, else if the user type is Service-Provider then it navigates to the ‘Service-Provider’ page.
+
 <img src="https://github.com/bala-arun-s/newlogistics/blob/master/raw/Sign-Up%20page.select%20one.png" width="30%" alt="Sign-Up page.select one">
 <table> <tr></tr> </table>
 
@@ -64,7 +65,9 @@ Tab placed in this page is used to navigate between the About, Receiver and Send
 Tab placed in this page is used to navigate between the About, Item-list and History page.
 <table> <tr></tr> </table>
 
-<img src="https://github.com/bala-arun-s/newlogistics/blob/master/raw/About%20page.png" width="40%" align="center" alt="About page">
+<p align="center">
+<img src="https://github.com/bala-arun-s/newlogistics/blob/master/raw/About%20page.png" width="45%" alt="About page">
+</p>
 
 ### About page
 This page is common to both the user type Sender-Receiver page and Service-Provider. It used to show the user data such as user name, mobile no, Gmail, user-type. It also has two buttons, a logout button is used to logout the user from the application and navigate to the login page, another button is edit button is used to modify the user data.
