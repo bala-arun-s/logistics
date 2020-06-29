@@ -47,6 +47,7 @@ If the user is a normal client, like people using this app then the user must ch
 If the user is working in a Logistic service providing company which is already tie-upped to this app, then the user must choose ‘Service-Provider’. 
 Sign up button which works the same as the Login button which navigates the user to the next page.
 The page which wants to display after the login page is decided by the user type which was registered in this page at user type select option. If the user type is Sender-Receiver then it navigates to ‘Sender-Receiver’ page, else if the user type is Service-Provider then it navigates to the ‘Service-Provider’ page
+<img src="https://github.com/bala-arun-s/newlogistics/blob/master/raw/Sign-Up%20page.select%20one.png" width="40%">
 <table> <tr></tr> </table>
 
 ### Tab pages
