@@ -54,22 +54,21 @@ The page which wants to display after the login page is decided by the user type
 ### Tab pages
 There are two-tab pages Sender-Receiver page and Service-Provider page. These pages hold super tabs which can help to navigate between pages by clicking the tab name and also allows swipe between pages.
 
+### Sender-Receiver pages
 <img src="https://github.com/bala-arun-s/newlogistics/blob/master/raw/Sender-Receiver%20pages.png" width="40%" alt="Sender-Receiver pages">
 
-### Sender-Receiver pages
 Tab placed in this page is used to navigate between the About, Receiver and Sender page.
 
+### Service-Provider pages
 <img src="https://github.com/bala-arun-s/newlogistics/blob/master/raw/Service-Provider%20pages.png" width="40%" alt="Service-Provider pages">
 
-### Service-Provider pages
 Tab placed in this page is used to navigate between the About, Item-list and History page.
 <table> <tr></tr> </table>
 
+### About page
 <p align="center">
 <img src="https://github.com/bala-arun-s/newlogistics/blob/master/raw/About%20page.png" width="45%" alt="About page">
 </p>
-
-### About page
 This page is common to both the user type Sender-Receiver page and Service-Provider. It used to show the user data such as user name, mobile no, Gmail, user-type. It also has two buttons, a logout button is used to logout the user from the application and navigate to the login page, another button is edit button is used to modify the user data.
 <table> <tr></tr> </table>
 
@@ -110,6 +109,7 @@ It is planned to include the ‘Email notification’ feature once the ‘Sender
 <table>
   <tr>
     <td></td>
-     <td></td>
+    <td></td>
+    <td></td>
   </tr>
 </table>
