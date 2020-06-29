@@ -19,7 +19,7 @@ Mongo Db (v4.2.7) is a no-SQL database, which is used in order to store the info
 ## Screen Navigation Flow
 
 <p align="center">
-<img src="https://github.com/bala-arun-s/newlogistics/blob/master/raw/Screen%20Navigation%20Flow%20.png">
+<img src="" alt="Screen Navigation Flow" >
 </p>
 
 ## Pages in this Application
