@@ -66,10 +66,10 @@ Tab placed in this page is used to navigate between the About, Item-list and His
 <table> <tr></tr> </table>
 
 ### About page
+This page is common to both the user type Sender-Receiver page and Service-Provider. It used to show the user data such as user name, mobile no, Gmail, user-type. It also has two buttons, a logout button is used to logout the user from the application and navigate to the login page, another button is edit button is used to modify the user data.
 <p align="center">
 <img src="https://github.com/bala-arun-s/newlogistics/blob/master/raw/About%20page.png" width="45%" alt="About page">
 </p>
-This page is common to both the user type Sender-Receiver page and Service-Provider. It used to show the user data such as user name, mobile no, Gmail, user-type. It also has two buttons, a logout button is used to logout the user from the application and navigate to the login page, another button is edit button is used to modify the user data.
 <table> <tr></tr> </table>
 
 <img src="https://github.com/bala-arun-s/newlogistics/blob/master/raw/Receiver%20page.png" width="30%" align="right" alt="Receiver page">
