@@ -17,3 +17,5 @@ Node JS(v12.16.3) software is used in order to perform server-side programming w
 Mongo Db(v4.2.7) is a no-SQL database, which is used in order to store the information regarding the users of the application.
 
 ## Screen Navigation Flow
+
+<img src="your_relative_path_here" width="350" title="hover text">
