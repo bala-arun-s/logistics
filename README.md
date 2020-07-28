@@ -1,5 +1,7 @@
+[github-pages.......................................................................................................................................................................................................................................................][hd]
+
+[hd]: https://bala-arun-s.github.io/logistics/
 # LOGISTICS APPLICATION 
-<a herf="https://bala-arun-s.github.io/logistics/">gitHubPages</a>
 ## Description
 
 The term ‘Logistics’ refers to the commercial activity of the transportation of goods i.e., transportation of goods from one place to the other. In the application we try to ease the process of Logistics. Here, we collect the details from the sender to know the destination of the receiver of the product and we also update the information as required by the receiver for their ease, to reduce the misconception of the address to require the package from the sender. This app works with the tie-ups provided by the Logistics service providers, for the transportation where we ensure the accurate precision for the delivery of the packages.
